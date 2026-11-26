@@ -1,0 +1,51 @@
+Check vdi equal signature:
+sha1sum Born2beroot.vdi (in the root of archive) and cat signature.txt
+
+Check SO is debian:
+hostnamectl
+
+Modify hostname:
+sudo hostnamectl set-hostname <login>42
+sudo nano /etc/hosts --
+sudo reboot
+
+Check partitions:
+lsblk
+
+Check if sudo is installed:
+which sudo
+sudo --version
+
+Verify var/log/sudo:
+sudo ls -la /var/log/sudo/
+sudo sudoreplay -d /var/log/sudo -l
+
+
+Check UFW * allow/delete port:
+sudo ufw status // sudo ufw status verbose
+sudo ufw allow 4242
+sudo ufw delete allow 4242
+
+Verify port 4242:
+ss -tunlp
+sudo grep -E "^(Port)" /etc/ssh/sshd_config
+
+Log with SSH:
+ssh user@localhost -p 4242
+
+
+
+
+
+
+
+
+
+
+Checar antes do pull:
+
+° Mensagem de erro personalizada (nano /etc/sudoers.d/sudo_config) -- tirar o bagulho em ESP
+° Mudar senha de user e root -- para bater com as regras
+
+
+
